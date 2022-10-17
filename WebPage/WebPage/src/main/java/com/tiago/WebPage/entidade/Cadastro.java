@@ -1,11 +1,21 @@
 package com.tiago.WebPage.entidade;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+
 public class Cadastro {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //Gerar um ID automaticamente / Igual auto-increment da table//
     private int id;
-      private String usuario;
-        private String email;
-          private String senha;
-            private String nome;
+    private String usuario;
+    private String email;
+    private String senha;
+    private String nome;
 
     /**
      * 
